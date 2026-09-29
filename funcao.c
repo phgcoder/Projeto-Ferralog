@@ -50,13 +50,14 @@ void laoding_opcao(void){
         // sleep serve para da um pause entre cada print
 
         printf("\r[|] autenticando dados do sistema...");
-        dormir(0.25);
+        dormir(1);
         printf("\r[/] autenticando dados do sistema...");
-        dormir(0.25);
+        dormir(1);
         printf("\r[-] autenticando dados do sistema...");
-        dormir(0.25);
+        dormir(1);
         printf("\r[\\] autenticando dados do sistema...");
-        dormir(0.25);
+        dormir(1);
     }
     printf("\ndados autenticados\n");
+    dormir(1);
 }

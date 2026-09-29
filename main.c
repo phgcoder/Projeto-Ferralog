@@ -62,9 +62,9 @@ int main()
         scanf("%d", &opcao);
         while(getchar() != '\n');
         
-        laoding_opcao();
 
         if(opcao > 0 && opcao < 5){
+            laoding_opcao();
             limpar_tela();
         }
         

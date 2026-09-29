@@ -8,8 +8,11 @@
     #include <unistd.h>
 #endif
 
-void espaco(void){
+void mensagem(const char texto[]){
 printf("===================================================\n");
+printf("                %s\n", texto);
+printf("===================================================\n");
+
 }
 
 void limpar_tela(void){

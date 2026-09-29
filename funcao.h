@@ -2,7 +2,7 @@
 #define FUNCAO_H
 
 //prototipos
-void espaco(void);
+void mensagem(const char texto[]);
 void limpar_tela(void);
 void dormir(unsigned int segundos);
 void loading(void);

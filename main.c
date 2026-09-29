@@ -44,9 +44,7 @@ int main()
     do {
         limpar_tela();
 
-        espaco();
-        printf("           sistema ferralog - INVENTARIO\n");
-        espaco();
+        mensagem("sistema ferralog - INVENTÁRIO");
 
         printf("bem-vindo ao controle logistico de ferramentas\n");
 
@@ -56,7 +54,7 @@ int main()
         printf("(3) verificar status da ferramenta\n");
         printf("(4) cadastro em lote\n");
         printf("(5) sair do sistema\n");
-        espaco();
+        printf("===================================================\n");
 
         printf("digite a opcao desejada: ");
         scanf("%d", &opcao);
@@ -75,9 +73,7 @@ int main()
 
         while (1)
         {
-            espaco();
-            printf("         cadastro de ferramentas\n");
-            espaco();
+            mensagem("cadastrar nova ferramenta");
 
             printf("nome da ferramenta: ");
             fgets(nome, sizeof(nome), stdin);

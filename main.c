@@ -22,7 +22,6 @@ int main()
     char nome[50];
     int codigo, garantia;
     float valor;
-    struct ferramenta ferramenta;
 
         printf("iniciando o sistema de ferramentas ...\n");
         printf("\n");
@@ -39,7 +38,7 @@ int main()
         //limpar_tela();
 
         loading();
-        dormir(2);
+        dormir(1);
 
     do {
         limpar_tela();
@@ -62,7 +61,7 @@ int main()
         
 
         if(opcao > 0 && opcao < 5){
-            laoding_opcao();
+            //laoding_opcao();
             limpar_tela();
         }
         
@@ -145,19 +144,41 @@ int main()
     case 4:{
         int quantidade, i;
 
+        mensagem("cadastro em lotes");
+
         printf("quantas ferramentas deseja cadastrar? ");
         scanf("%d", &quantidade);
+        while(getchar() != '\n');
 
-        if(quantidade <= 0){
-            printf("quantidade invalida\n");
+        while(quantidade <= 0){
+            printf("quantidade invalida!\n");
+            printf("digite novamente. Quantas ferramentas deseja cadastrar? ");
+            scanf("%d", &quantidade);
+            while(getchar() != '\n');
         }
-        else{
-            for(i = 1; i <= quantidade; i++){
-                printf("digite o valor da ferramenta: ");
-                scanf("%f", &ferramenta.valor);
+
+        for(i = 1; i <= quantidade; i++){
+            printf("--- ferramenta %d de %d ---\n", i, quantidade);
+
+            printf("digite o nome da ferramenta: ");
+            fgets(nome, sizeof(nome), stdin);
+            nome[strcspn(nome, "\n")] = '\0';
+
+            printf("digite o valor da ferramenta: R$");
+            scanf("%f", &valor);
+            while(getchar() != '\n');
+
+            while (valor <= 0)
+            {
+                printf("valor invalido!\n");
+                printf("digite novamnte. valor da ferramenta: R$");
+                scanf("%f", &valor);
+                while(getchar() != '\n');
             }
-        //printf("%.2f\n", ferramenta.valor);
-        }
+            
+            }
+        printf("processanmento de lote finalizado. Retornando ao menu...\n");
+        dormir(2);
         break;
     }
         

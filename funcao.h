@@ -7,5 +7,6 @@ void limpar_tela(void);
 void dormir(unsigned int segundos);
 void loading(void);
 void laoding_opcao(void);
+void continuar(void);
 
 #endif

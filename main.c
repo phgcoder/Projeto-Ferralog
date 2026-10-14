@@ -18,7 +18,6 @@ float valor;
 int main()
 {
     int opcao = 0;
-    char continuar;
     char nome[50];
     int codigo, garantia;
     float valor;
@@ -69,6 +68,7 @@ int main()
         switch (opcao){
 
     case 1:{
+        char continuar;
 
         while (1)
         {
@@ -115,6 +115,7 @@ int main()
             printf("deseja cadastrar mais alguma ferramenta? [s/n] ");
             scanf(" %c", &continuar);
             while(getchar() != '\n');
+            
             while (continuar != 's' && continuar != 'n'){
                 printf("opcao invalida, digite novamente. [s/n] ");
                 scanf(" %c", &continuar);
@@ -142,7 +143,8 @@ int main()
         break;
 
     case 4:{
-        int quantidade, i;
+        int quantidade;
+        int cadastro[quantidade];
 
         mensagem("cadastro em lotes");
 
@@ -157,7 +159,7 @@ int main()
             while(getchar() != '\n');
         }
 
-        for(i = 1; i <= quantidade; i++){
+        for(int i = 1; i <= quantidade; i++){
             printf("--- ferramenta %d de %d ---\n", i, quantidade);
 
             printf("digite o nome da ferramenta: ");
